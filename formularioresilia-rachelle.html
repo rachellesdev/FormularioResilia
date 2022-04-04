@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Formulário Resilia</title>
+<style>
+
+form{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffd000;
+    width: 60%;
+    padding: 40px;
+    border: 2px solid;
+    padding: 10px;
+    border-radius: 10px;
+}    
+
+body  {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #000000;
+  background-size: 100%;
+  text-align: center;
+}
+
+#titulo{
+    margin-top: 1px;
+    font-size: 300%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#subtitulo{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.grupo{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+fieldset{
+    border: 0;
+}
+
+.campo input[type="text"], .campo input[type="email"], .campo input[type="date"], .campo input[type="radio"], .campo input[type="cpf"], .campo select {
+    border: 1px solid #000002;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+}
+
+.botao {
+    font-size: 20px;
+    background: #080808;
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+
+</style>    
+</head>
+<body>
+    
+   
+
+    <form>
+        <div>
+            <h1 id="titulo">Formulário Resilia</h1>
+            <p id="subtitulo"><em>Preencha seus dados corretamente e se inscreva na nova turma webdev:</em></p>
+            <br>
+        </div>
+        <fieldset class="grupo"> 
+            <div class="campo">
+                <label><strong>Nome completo:</strong></label>
+                <input type="text" name="nome" id="nome" required>
+            </div>
+            <br>
+            <div class="campo">
+                <label><strong>CPF:</strong></label>
+                <input type="cpf" name="cpf" id="cpf" required>
+            </div>
+            <br>
+            <div class="campo">
+                <label><strong>Email:</strong></label>
+                <input type="email" name="email" id="email" required>
+            </div>
+            <br>
+            <div class="campo">
+                <label><strong>Data de nascimento:</strong></label>
+                <input type="date" name="nascimento" id="nascimento" required>
+            </div>
+            <br>
+            <div class="campo">
+                <label><strong>Qual melhor horário de aula para você?</strong></label>
+                <select id="horario" required>
+                    <option selected disabled value="">Selecione</option>
+                    <option>Manhã</option>
+                    <option>Tarde</option>
+                    <option>Noite</option>
+                </select>
+            </div>
+            <br>
+            <div class="campo">
+                <label><strong>Por onde conheceu a Resilia?</strong></label>
+                <label>
+                    <input type="radio" name="ondeconheceu" value="Instagram">Instagram
+                </label>
+                <label>
+                    <input type="radio" name="ondeconheceu" value="LinkedIn">LinkedIn
+                </label>
+                <label>
+                    <input type="radio" name="ondeconheceu" value="Google">Google
+                </label>
+                <label>
+                    <input type="radio" name="ondeconheceu" value="Através de um resiliente"> Através de um resiliente
+                </label>
+            </div>
+        </fieldset>
+        <br>
+        <button class="botao" type="submit" onsubmit="">Enviar</button>
+    </form>
+
+</body>
+</html>
